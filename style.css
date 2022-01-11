@@ -35,12 +35,10 @@ body{
     top: 0;
     animation: top-slide 6s steps(4) infinite;
 }
-
 @keyframes top-slide{
     100%{
         top: -365px;
     }
-    
 }
 .dynamic li span{
     position: relative;
@@ -61,25 +59,25 @@ body{
         left: 100%;
         margin: 0 -35px 0 38px;
     }
-    
 }
-
+    /* ----- Button part start -------*/
 .btn button{
     position: relative;
     overflow: hidden;
 
-    padding: 15px 20px;
-    color: black;
-    border-radius: 25px;
-    border: none;
-    font-size: 20px;
+    padding: 13px 30px;
+    color: cyan;
+    border-radius: 27px;
+    border: 1px solid cyan;
+    font-size: 25px;
     font-weight: bold;
+    background-color:rgb(4, 1, 27);
 }
 .btn button::before{
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgb(12, 179, 201);
+    background-color: rgb(6, 241, 241);
     z-index: -1;
 
     transition: transform .3s ease-in;
@@ -90,12 +88,15 @@ body{
     transform: scaleX(1);
 }
 .btn button{
-    transition: color .1s ease-in;
+    transition: color .3s ease-in;
+    transition: box-shadow .3s ease-in;
     z-index: 1;
 }
 .btn button:hover{
-    color: rgb(255, 255, 255);
+    color: rgb(4, 1, 27);
     cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 0 30px cyan;
 }
 
 

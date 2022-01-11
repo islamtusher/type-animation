@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 body{
     margin: 0;
@@ -8,6 +9,7 @@ body{
     min-height: 100vh;
     color: cornsilk;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: rgb(4, 1, 27);  
@@ -61,6 +63,51 @@ body{
     }
     
 }
-    
 
+.btn button{
+    position: relative;
+    overflow: hidden;
+
+    padding: 15px 20px;
+    color: black;
+    border-radius: 25px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+.btn button::before{
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgb(12, 179, 201);
+    z-index: -1;
+
+    transition: transform .3s ease-in;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+.btn button:hover::before{
+    transform: scaleX(1);
+}
+.btn button{
+    transition: color .1s ease-in;
+    z-index: 1;
+}
+.btn button:hover{
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+
+/* .btn button:hover{
+    animation: color-slide 2s infinite ;
+}
+    
+@keyframes color-slide {
+    0%   {background-color: rgb(20, 211, 211); left: 0; }
+    25%  {background-color: rgb(20, 211, 211); left: 25px;}
+    50%  {background-color: rgb(20, 211, 211); left: 50px;}
+    75%  {background-color: rgb(20, 211, 211); left: 75px;}
+    100% {background-color: rgb(20, 211, 211); left: 100px;}
+  } */
 
